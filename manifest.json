@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Enhanced Sheets",
+    "version": "1.0",
+    "description": "Google Sheets Extension with Enhanced Features",
+    // "icons": {
+    //   "48": "icon.png"
+    // },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "browser_action": {
+    //   "default_icon": {
+    //     "16": "icon.png",
+    //     "48": "icon.png",
+    //     "128": "icon.png"
+    //   },
+      "default_title": "Enhanced Sheets",
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
